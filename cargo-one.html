@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cargo.one — Case study · Deri O hUiginn</title>
+    <meta name="description" content="cargo.one case study — leading the core booking platform's Vue 2→3 migration, the real-time pricing layer, and the rate-comparison to quote workflow." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- top bar -->
+    <header class="topbar">
+      <div class="wrap nav__inner">
+        <a class="brand back" href="index.html#work">← DE<span class="r">RI</span></a>
+        <div class="topbar__links">
+          <a href="index.html#work">Work</a>
+          <a href="ibm-security.html">IBM Security</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="nav__cta" href="images/Deri-O-Huiginn-Resume.pdf" download>Résumé ↓</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- case hero -->
+    <section class="case-hero section">
+      <div class="wrap">
+        <p class="eyebrow">Case study · 2021 — Now</p>
+        <h1 class="h-xl">cargo.one</h1>
+        <p class="route" style="margin-top:1rem;color:#fff">FRA <span class="arrow">→</span> ORD · air freight</p>
+        <p class="lead">
+          cargo.one is the digital marketplace where freight forwarders search,
+          compare and book air cargo in real time. As Senior Frontend Engineer I
+          own core booking-platform work end to end — from the client-side data
+          model and performance to the rate-comparison and quoting experience.
+        </p>
+        <div class="case-hero__meta">
+          <div><div class="k">Role</div><div class="v">Senior Frontend Engineer</div></div>
+          <div><div class="k">Scale</div><div class="v">30,000 forwarders · 172 countries</div></div>
+          <div><div class="k">Stack</div><div class="v">Vue 3 · TypeScript · Node</div></div>
+        </div>
+        <figure class="window case-shot">
+          <div class="window__bar"><span class="window__dot"></span><span class="window__dot"></span><span class="window__dot"></span><span class="window__url">app.cargo.one — live rates</span></div>
+          <img src="images/cargo-live-rates.jpg" alt="cargo.one live-rate comparison grid — carriers by date, sorted on price" width="1600" height="939" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- narrative feature rows -->
+    <section class="section">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">The workflow</p>
+          <h2 class="h-lg uline">Search → compare → quote</h2>
+          <p>A forwarder enters a shipment and, in seconds, compares live and contract rates across dozens of carriers — then turns the best option into a client-ready quote. I build the surfaces that make that fast and trustworthy.</p>
+        </div>
+
+        <div class="feat-row">
+          <div class="feat-row__media">
+            <figure class="window">
+              <div class="window__bar"><span class="window__dot"></span><span class="window__dot"></span><span class="window__dot"></span><span class="window__url">live rates</span></div>
+              <img src="images/cargo-live-rates.jpg" alt="Live rate comparison grid" width="1600" height="939" loading="lazy" />
+            </figure>
+          </div>
+          <div class="feat-row__body">
+            <p class="feat-row__ey">Live rate comparison</p>
+            <h3>Real-time pricing, made legible</h3>
+            <p>
+              I architected the unit-conversion and dynamic-pricing layer behind
+              the grid — the client-side data model and caching strategy that
+              turn a stream of live carrier rates (across kg/lb, weight breaks and
+              surcharges) into a fast, sortable comparison. It's reused across
+              every booking surface, so pricing stays consistent wherever a
+              forwarder looks.
+            </p>
+          </div>
+        </div>
+
+        <div class="feat-row feat-row--rev">
+          <div class="feat-row__media">
+            <figure class="window">
+              <div class="window__bar"><span class="window__dot"></span><span class="window__dot"></span><span class="window__dot"></span><span class="window__url">static rates</span></div>
+              <img src="images/cargo-static-rates.jpg" alt="Static rates with weight-break pricing per carrier" width="1600" height="756" loading="lazy" />
+            </figure>
+          </div>
+          <div class="feat-row__body">
+            <p class="feat-row__ey">Static &amp; contract rates</p>
+            <h3>Every rate type, one mental model</h3>
+            <p>
+              Beyond live rates, forwarders work with negotiated contract rates
+              and weight-break tariffs. I built the static-rates experience to
+              share the same components and data model as live rates — so the two
+              feel like one product, with weight breaks, service levels and
+              filters that behave exactly as users expect.
+            </p>
+          </div>
+        </div>
+
+        <div class="feat-row">
+          <div class="feat-row__media">
+            <figure class="window">
+              <div class="window__bar"><span class="window__dot"></span><span class="window__dot"></span><span class="window__dot"></span><span class="window__url">quote</span></div>
+              <img src="images/cargo-quote.jpg" alt="Quote builder — recipient and quote details" width="1600" height="750" loading="lazy" />
+            </figure>
+          </div>
+          <div class="feat-row__body">
+            <p class="feat-row__ey">Offer → quote</p>
+            <h3>From best rate to client-ready quote</h3>
+            <p>
+              A chosen rate becomes a branded, exportable quote in a couple of
+              clicks — recipient details, incoterms, validity and charges — with
+              a path to sync into the forwarder's TMS. I instrumented the
+              offer-to-booking funnel end to end so we can see where users drop
+              off and iterate on the moments that matter.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- impact -->
+    <section class="section section--ink">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Impact</p>
+          <h2 class="h-lg">What I've shipped here</h2>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="stat__v">Vue 2→3</div><div class="stat__k">core platform migration, zero regressions</div></div>
+          <div class="stat"><div class="stat__v">~55%</div><div class="stat__k">smaller production bundle</div></div>
+          <div class="stat"><div class="stat__v">172</div><div class="stat__k">countries served</div></div>
+          <div class="stat"><div class="stat__v">20-eng</div><div class="stat__k">agentic-AI workflows led</div></div>
+        </div>
+        <p class="lead" style="margin-top:2.5rem;color:var(--on-ink-dim)">
+          I led the Vue 2 → 3 migration of the core booking platform in four
+          months — authoring the majority of the changes with zero production
+          regressions — which unlocked the Composition API, TypeScript and modern
+          tooling across the codebase. Alongside the product work, I defined the
+          guardrails for agentic-AI development (Claude Code, MCP) across a
+          20-engineer team.
+        </p>
+      </div>
+    </section>
+
+    <!-- stack -->
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Stack</p>
+        <h2 class="h-md uline">Built with</h2>
+        <div class="tags" style="margin-top:1.5rem">
+          <span class="tag">Vue 3</span><span class="tag">Composition API</span><span class="tag">TypeScript</span>
+          <span class="tag">Vuex / Pinia</span><span class="tag">SCSS</span><span class="tag">Vite</span>
+          <span class="tag">Node.js</span><span class="tag">Playwright</span><span class="tag">Heap</span>
+          <span class="tag">FullStory</span><span class="tag">Sentry</span>
+        </div>
+        <hr class="rainbow-rule" style="margin-top:2.5rem;max-width:16rem" />
+        <div class="hero__actions" style="margin-top:2rem">
+          <a class="btn btn--primary" href="index.html#work">← Back to all work</a>
+          <a class="btn btn--ghost" href="ibm-security.html">Next: IBM Security <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <span class="brand">DE<span class="r">RI</span></span>
+        <span>Deri O hUiginn · Senior Frontend Engineer · Spain (Remote)</span>
+      </div>
+    </footer>
+  </body>
+</html>
