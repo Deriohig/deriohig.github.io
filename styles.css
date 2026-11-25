@@ -250,6 +250,10 @@ h1, h2, h3, h4 { font-weight: var(--fw-heavy); line-height: var(--lh-tight); let
 .minicard__title { font-size: var(--fs-lg); font-weight: var(--fw-heavy); margin-top: var(--sp-2); }
 .minicard__desc { color: var(--text-dim); font-size: var(--fs-sm); margin-top: var(--sp-2); }
 
+/* side projects: links sit at the bottom of each card */
+.minicard--project { display: flex; flex-direction: column; }
+.minicard--project .actions { margin-top: auto; padding-top: var(--sp-5); }
+
 /* ---------------- skills ---------------- */
 .skillgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(var(--sp-5), 2.5vw, var(--sp-6)); }
 .skill__icon { width: 76px; height: 76px; display: grid; place-items: center; border-radius: var(--r-md); background: var(--paper-2); border: 1px solid var(--line); margin-bottom: var(--sp-4); }
