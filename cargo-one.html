@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cargo.one case study · Deri O hUiginn</title>
+    <meta name="description" content="cargo.one case study: the Vue 2 to Vue 3 migration of the core booking platform, the real-time pricing layer, the rate-to-quote flow, and an LLM quoting workflow in internal evaluation." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <div class="wrap nav__inner">
+        <a class="brand back" href="index.html#work" aria-label="Back to home"><span aria-hidden="true">←</span> DE<span class="r">RI</span></a>
+        <nav class="topbar__links" aria-label="Case studies">
+          <a href="index.html#work">Work</a>
+          <a href="ibm-security.html">IBM Security</a>
+          <a href="index.html#contact">Contact</a>
+          <a class="nav__cta" href="images/Deri-O-Huiginn-Resume.pdf" download>CV (PDF)</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="case-hero section">
+        <div class="wrap">
+          <p class="eyebrow">Case study · 2021 to now</p>
+          <h1 class="h-xl">cargo.one</h1>
+          <p class="route">FRA <span class="arrow" aria-hidden="true">→</span> ORD · air freight</p>
+          <p class="lead">
+            cargo.one is the marketplace where freight forwarders search, compare
+            and book air cargo in real time. I work on the core booking platform:
+            the client-side data model, performance, rate comparison and quoting.
+          </p>
+          <dl class="case-hero__meta">
+            <div><dt class="k">Role</dt><dd class="v">Senior Frontend Engineer · AI Team</dd></div>
+            <div><dt class="k">Scale</dt><dd class="v">30,000 users · 172 countries</dd></div>
+            <div><dt class="k">Stack</dt><dd class="v">Vue 3 · JavaScript · Python</dd></div>
+          </dl>
+          <figure class="window case-shot">
+            <div class="window__bar" aria-hidden="true"><span class="window__dot"></span><span class="window__dot"></span><span class="window__dot"></span><span class="window__url">app.cargo.one · live rates</span></div>
+            <img src="images/cargo-live-rates.jpg" alt="cargo.one live-rate comparison grid: carriers by date, sorted by price" width="1600" height="939" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="flow-title">
+        <div class="wrap">
+          <div class="head">
+            <p class="eyebrow">The workflow</p>
+            <h2 class="h-lg uline" id="flow-title">Search, compare, quote</h2>
+            <p>A forwarder enters a shipment, compares live and contract rates across carriers, and turns the chosen rate into a quote for their client.</p>
+          </div>
+
+          <div class="feat-row">
+            <div class="feat-row__media">
+              <figure class="window">
+                <div class="window__bar" aria-hidden="true"><span class="window__dot"></span><span class="window__dot"></span><span class="window__dot"></span><span class="window__url">live rates</span></div>
+                <img src="images/cargo-live-rates.jpg" alt="Live rate comparison grid" width="1600" height="939" loading="lazy" />
+              </figure>
+            </div>
+            <div class="feat-row__body">
+              <p class="feat-row__ey">Live rate comparison</p>
+              <h3>One pricing layer for every booking screen</h3>
+              <p>
+                I designed the unit-conversion and dynamic-pricing layer behind the
+                rate grid: the client-side data model and caching that turn live
+                carrier rates (kg/lb, weight breaks, surcharges) into a sortable
+                comparison. Every booking screen uses it, so prices match wherever
+                a forwarder looks.
+              </p>
+            </div>
+          </div>
+
+          <div class="feat-row feat-row--rev">
+            <div class="feat-row__media">
+              <figure class="window">
+                <div class="window__bar" aria-hidden="true"><span class="window__dot"></span><span class="window__dot"></span><span class="window__dot"></span><span class="window__url">static rates</span></div>
+                <img src="images/cargo-static-rates.jpg" alt="Static rates with weight-break pricing per carrier" width="1600" height="756" loading="lazy" />
+              </figure>
+            </div>
+            <div class="feat-row__body">
+              <p class="feat-row__ey">Static and contract rates</p>
+              <h3>The same components for every rate type</h3>
+              <p>
+                Forwarders also work with negotiated contract rates and weight-break
+                tariffs. I built the static-rates view on the same components and
+                data model as live rates, so weight breaks, service levels and
+                filters behave the same way in both.
+              </p>
+            </div>
+          </div>
+
+          <div class="feat-row">
+            <div class="feat-row__media">
+              <figure class="window">
+                <div class="window__bar" aria-hidden="true"><span class="window__dot"></span><span class="window__dot"></span><span class="window__dot"></span><span class="window__url">quote</span></div>
+                <img src="images/cargo-quote.jpg" alt="Quote builder with recipient and quote details" width="1600" height="750" loading="lazy" />
+              </figure>
+            </div>
+            <div class="feat-row__body">
+              <p class="feat-row__ey">Rate to quote</p>
+              <h3>From a chosen rate to a client quote</h3>
+              <p>
+                A chosen rate becomes a branded, exportable quote with recipient
+                details, incoterms, validity and charges, with a path to sync into
+                the forwarder's TMS. I instrumented the offer-to-booking funnel so
+                the team can see where users drop off.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--ink" aria-labelledby="impact-title">
+        <div class="wrap">
+          <div class="head">
+            <p class="eyebrow">Impact</p>
+            <h2 class="h-lg" id="impact-title">What I've shipped</h2>
+          </div>
+          <dl class="stats">
+            <div class="stat"><dt class="stat__k">core platform migration, no reverts</dt><dd class="stat__v">Vue 2→3</dd></div>
+            <div class="stat"><dt class="stat__k">less JavaScript shipped</dt><dd class="stat__v">18%</dd></div>
+            <div class="stat"><dt class="stat__k">countries served</dt><dd class="stat__v">172</dd></div>
+            <div class="stat"><dt class="stat__k">engineers using my AI dev workflow</dt><dd class="stat__v">~20</dd></div>
+          </dl>
+          <p class="lead">
+            In 2024 I led two other engineers through the four-month Vue 2 to Vue 3 migration of the core booking platform. We shipped it section by section on the Vue compat build with Jest and Playwright coverage and never had to revert, and I wrote about 70% of the changes. The codebase moved to the Composition API, and later I proposed and made the move from Webpack to Vite, which cut the JavaScript users download by 18%. I've run the cross-team frontend guild for over four years, mentored about 8 engineers, and built the Claude Code skills and MCP server that about 20 engineers on 5 teams now use.
+          </p>
+          <p class="lead">
+            Since October 2026 I've been on the AI team, where I built an import-procurement flow, now in internal evaluation. It extracts shipment details from
+            forwarders' emails, requests rates from overseas partners, parses their
+            replies and combines them with the forwarder's own destination rates
+            into a door-to-door quote. It's a multi-agent Pydantic AI workflow on Gemini and Claude, with Python agent services, MCP tools and a Vue UI. A person reviews each quote before it goes out, and the evals library I co-built (gold-set and LLM-as-judge checks on Vertex AI, traced in Pydantic Logfire) runs in CI for most of the team's agents.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="stack-title">
+        <div class="wrap">
+          <p class="eyebrow">Stack</p>
+          <h2 class="h-md uline" id="stack-title">Built with</h2>
+          <ul class="tags" aria-label="Technologies">
+            <li class="tag">Vue 3</li><li class="tag">Composition API</li><li class="tag">JavaScript</li>
+            <li class="tag">Vuex / Pinia</li><li class="tag">SCSS</li><li class="tag">Vite</li>
+            <li class="tag">Jest</li><li class="tag">Playwright</li><li class="tag">Heap</li>
+            <li class="tag">FullStory</li><li class="tag">Sentry</li>
+            <li class="tag">Python</li><li class="tag">MCP</li><li class="tag">Vertex AI</li><li class="tag">Pydantic Logfire</li>
+          </ul>
+          <div class="actions">
+            <a class="btn btn--primary" href="index.html#work"><span class="arrow" aria-hidden="true">←</span> Back to all work</a>
+            <a class="btn btn--ghost" href="ibm-security.html">Next: IBM Security <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <span class="brand" aria-hidden="true">DE<span class="r">RI</span></span>
+        <span>Deri O hUiginn · Senior Frontend Engineer · Valencia, Spain (remote)</span>
+      </div>
+    </footer>
+  </body>
+</html>
